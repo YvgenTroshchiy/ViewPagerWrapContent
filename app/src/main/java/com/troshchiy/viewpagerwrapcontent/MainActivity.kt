@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Create the adapter that will return a fragment for each of the three primary sections of the activity.
         sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
 
         // Set up the ViewPager with the sections adapter.
@@ -42,8 +41,13 @@ class MainActivity : AppCompatActivity() {
         viewPager?.pageMargin = 12.dpToPx
 
 //        viewPager?.adapter = sectionsPagerAdapter
-        viewPager?.adapter = ViewPagerAdapter()
+        val adapter = ViewPagerAdapter()
+        viewPager?.adapter = adapter
 
+
+        val f1 = Foo("Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library.")
+        val f2 = Foo("To begin, create a layout that contains a ViewPager:")
+        adapter.data = listOf(f1, f2)
     }
 }
 
@@ -79,8 +83,17 @@ class PlaceholderFragment : Fragment() {
     }
 }
 
+class Foo(val text: String)
+
 class ViewPagerAdapter : PagerAdapter() {
-    override fun getCount() = 2
+
+    var data: List<Foo> = listOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+
+    override fun getCount() = data.size
     override fun isViewFromObject(view: View, `object`: Any): Boolean = (view == `object`)
     override fun getPageWidth(position: Int) = 0.95f
 
@@ -89,12 +102,8 @@ class ViewPagerAdapter : PagerAdapter() {
         val textView = view.findViewById<TextView>(R.id.tv_text)
         val imageView = view.findViewById<ImageView>(R.id.img_image)
 
-        if (position == 0) {
-            textView.text = "Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library."
-        } else {
-            textView.text = "To begin, create a layout that contains a ViewPager:"
-            imageView.layoutParams.height = 200.dpToPx
-        }
+        textView.text = data[position].text
+        if (position == 1) imageView.layoutParams.height = 40.dpToPx
 
         container.addView(view)
         return view
@@ -113,6 +122,9 @@ class DetailViewPager @JvmOverloads constructor(context: Context, attrs: Attribu
                 val child = getChildAt(i)
                 child.measuredWidth
                 measureChild(child, widthMeasureSpec, heightMeasureSpec)
+
+                val g = 0
+                val f = 0
 
                 val height = child.measuredHeight
                 if (height > maxHeight) maxHeight = height

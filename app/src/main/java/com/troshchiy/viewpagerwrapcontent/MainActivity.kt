@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         // Set up the ViewPager with the sections adapter.
         viewPager = findViewById(R.id.container)
 
-        viewPager?.pageMargin = 10.dpToPx
+        viewPager?.pageMargin = 12.dpToPx
 
 //        viewPager?.adapter = sectionsPagerAdapter
         viewPager?.adapter = ViewPagerAdapter()

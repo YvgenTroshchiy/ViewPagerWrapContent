@@ -54,7 +54,6 @@ class SectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         return PlaceholderFragment.newInstance(position + 1)
     }
 
-//        override fun getPageWidth(position: Int) = 1f
 }
 
 class PlaceholderFragment : Fragment() {
@@ -82,6 +81,7 @@ class PlaceholderFragment : Fragment() {
 class ViewPagerAdapter : PagerAdapter() {
     override fun getCount() = 2
     override fun isViewFromObject(view: View, `object`: Any): Boolean = (view == `object`)
+    override fun getPageWidth(position: Int) = 0.95f
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = container.inflate(R.layout.viewpager_element)

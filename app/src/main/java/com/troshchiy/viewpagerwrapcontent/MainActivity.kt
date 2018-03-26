@@ -73,7 +73,7 @@ class PlaceholderFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.viewpager_element, container, false)
-        val textView = view.findViewById<View>(R.id.section_label) as TextView
+        val textView = view.findViewById<View>(R.id.tv_text) as TextView
         textView.text = getString(R.string.section_format, arguments?.getInt(ARG_SECTION_NUMBER))
         return view
     }
@@ -84,11 +84,11 @@ class ViewPagerAdapter : PagerAdapter() {
     override fun isViewFromObject(view: View, `object`: Any): Boolean = (view == `object`)
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        val view = container.inflate(R.layout.viewpager_element)
+        val textView = view.findViewById<TextView>(R.id.tv_text)
 
-        val view = if (position == 0)
-            container.inflate(R.layout.viewpager_element)
-        else
-            container.inflate(R.layout.viewpager_element_2)
+        if (position == 0) textView.text = "Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library."
+        else textView.text = "To begin, create a layout that contains a ViewPager:"
 
         container.addView(view)
         return view

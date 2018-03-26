@@ -9,17 +9,14 @@
     android:background="@drawable/rounded_white_rectangle_10_both">
 
     <TextView
-        android:id="@+id/section_label"
+        android:id="@+id/tv_text"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1"
-        tools:text="section_label" />
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="To begin, create a layout that contains a ViewPager:" />
 
 </android.support.constraint.ConstraintLayout>

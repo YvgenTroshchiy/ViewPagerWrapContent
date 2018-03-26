@@ -13,6 +13,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 
 
@@ -86,9 +87,14 @@ class ViewPagerAdapter : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = container.inflate(R.layout.viewpager_element)
         val textView = view.findViewById<TextView>(R.id.tv_text)
+        val imageView = view.findViewById<ImageView>(R.id.img_image)
 
-        if (position == 0) textView.text = "Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library."
-        else textView.text = "To begin, create a layout that contains a ViewPager:"
+        if (position == 0) {
+            textView.text = "Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library."
+        } else {
+            textView.text = "To begin, create a layout that contains a ViewPager:"
+            imageView.layoutParams.height = 200.dpToPx
+        }
 
         container.addView(view)
         return view

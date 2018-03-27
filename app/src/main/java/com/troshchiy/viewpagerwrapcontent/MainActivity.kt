@@ -94,7 +94,7 @@ class ViewPagerAdapter : PagerAdapter() {
         }
 
     override fun getCount() = data.size
-    override fun isViewFromObject(view: View, `object`: Any): Boolean = (view == `object`)
+    override fun isViewFromObject(view: View, obj: Any): Boolean = (view == obj)
     override fun getPageWidth(position: Int) = 0.95f
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {

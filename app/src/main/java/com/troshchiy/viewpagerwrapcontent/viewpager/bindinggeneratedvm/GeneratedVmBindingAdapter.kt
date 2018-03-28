@@ -4,15 +4,15 @@ import android.databinding.DataBindingUtil
 import android.support.v4.view.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
-import com.troshchiy.viewpagerwrapcontent.Foo
 import com.troshchiy.viewpagerwrapcontent.R
+import com.troshchiy.viewpagerwrapcontent.Ride
 import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdBinding
 import com.troshchiy.viewpagerwrapcontent.inflater
 
 
 class GeneratedVmBindingAdapter : PagerAdapter() {
 
-    var data: List<Foo> = listOf()
+    var data: List<Ride> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()

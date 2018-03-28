@@ -8,7 +8,7 @@
 
         <variable
             name="foo"
-            type="com.troshchiy.viewpagerwrapcontent.Foo" />
+            type="com.troshchiy.viewpagerwrapcontent.Ride" />
     </data>
 
     <android.support.constraint.ConstraintLayout

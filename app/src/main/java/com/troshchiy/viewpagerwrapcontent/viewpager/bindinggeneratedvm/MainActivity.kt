@@ -6,8 +6,8 @@ import android.os.Handler
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.troshchiy.viewpagerwrapcontent.Foo
 import com.troshchiy.viewpagerwrapcontent.R
+import com.troshchiy.viewpagerwrapcontent.Ride
 import com.troshchiy.viewpagerwrapcontent.dpToPx
 import com.troshchiy.viewpagerwrapcontent.getLogTag
 
@@ -38,15 +38,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun setDataToAdapter() {
         Log.w(tag, "setDataToAdapter")
-        val f1 = Foo("Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library.")
-        val f2 = Foo("To begin, create a layout that contains a ViewPager:")
+        val f1 = Ride("Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library.")
+        val f2 = Ride("To begin, create a layout that contains a ViewPager:")
         adapter.data = listOf(f1, f2)
     }
 
     private fun setDataToAdapter2() {
         Log.w(tag, "setDataToAdapter2")
-        val f1 = Foo("Tra ta ta ta")
-        val f2 = Foo("Param pam pam pam")
+        val f1 = Ride("Tra ta ta ta")
+        val f2 = Ride("Param pam pam pam")
         adapter.data = listOf(f1, f2)
     }
 }

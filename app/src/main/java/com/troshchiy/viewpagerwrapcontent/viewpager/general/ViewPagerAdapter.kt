@@ -5,15 +5,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.troshchiy.viewpagerwrapcontent.Foo
 import com.troshchiy.viewpagerwrapcontent.R
+import com.troshchiy.viewpagerwrapcontent.Ride
 import com.troshchiy.viewpagerwrapcontent.dpToPx
 import com.troshchiy.viewpagerwrapcontent.inflate
 
 
 class ViewPagerAdapter : PagerAdapter() {
 
-    var data: List<Foo> = listOf()
+    var data: List<Ride> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -25,6 +25,7 @@ class ViewPagerAdapter : PagerAdapter() {
 
     // For test purpose. https://stackoverflow.com/questions/7263291/viewpager-pageradapter-not-updating-the-view
     override fun getItemPosition(obj: Any): Int = POSITION_NONE
+
     override fun destroyItem(container: ViewGroup, position: Int, obj: Any) {
         container.removeView(obj as View)
     }

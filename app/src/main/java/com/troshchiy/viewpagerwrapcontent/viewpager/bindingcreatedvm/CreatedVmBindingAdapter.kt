@@ -1,4 +1,4 @@
-package com.troshchiy.viewpagerwrapcontent.viewpager.bindinggenerated
+package com.troshchiy.viewpagerwrapcontent.viewpager.bindingcreatedvm
 
 import android.databinding.DataBindingUtil
 import android.support.v4.view.PagerAdapter
@@ -10,7 +10,7 @@ import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdBinding
 import com.troshchiy.viewpagerwrapcontent.inflater
 
 
-class BindingViewPagerAdapter : PagerAdapter() {
+class CreatedVmBindingAdapter : PagerAdapter() {
 
     var data: List<Foo> = listOf()
         set(value) {
@@ -24,6 +24,7 @@ class BindingViewPagerAdapter : PagerAdapter() {
 
     // For test purpose. https://stackoverflow.com/questions/7263291/viewpager-pageradapter-not-updating-the-view
     override fun getItemPosition(obj: Any): Int = POSITION_NONE
+
     override fun destroyItem(container: ViewGroup, position: Int, obj: Any) {
         container.removeView(obj as View)
     }

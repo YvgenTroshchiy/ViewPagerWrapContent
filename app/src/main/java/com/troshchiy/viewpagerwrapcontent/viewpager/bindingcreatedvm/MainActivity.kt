@@ -1,4 +1,4 @@
-package com.troshchiy.viewpagerwrapcontent.viewpager.bindinggenerated
+package com.troshchiy.viewpagerwrapcontent.viewpager.bindingcreatedvm
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val tag = getLogTag<MainActivity>()
 
     private var viewPager: ViewPager? = null
-    private val adapter = BindingViewPagerAdapter()
+    private val adapter = CreatedVmBindingAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

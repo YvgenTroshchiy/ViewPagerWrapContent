@@ -1,4 +1,4 @@
-package com.troshchiy.viewpagerwrapcontent.viewpager.general
+package com.troshchiy.viewpagerwrapcontent.viewpager.bindinggeneratedvm
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -16,8 +16,8 @@ import com.troshchiy.viewpagerwrapcontent.getLogTag
 class MainActivity : AppCompatActivity() {
     private val tag = getLogTag<MainActivity>()
 
-    private lateinit var viewPager: ViewPager
-    private val adapter = ViewPagerAdapter()
+    private var viewPager: ViewPager? = null
+    private val adapter = GeneratedVmBindingAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupViewPager() {
         viewPager = findViewById(R.id.viewPager)
-        viewPager.pageMargin = 12.dpToPx
-        viewPager.adapter = adapter
+        viewPager?.pageMargin = 12.dpToPx
+        viewPager?.adapter = adapter
     }
 
     private fun setDataToAdapter() {

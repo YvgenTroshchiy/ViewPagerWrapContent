@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#a9a9a9"
-    tools:context=".ViewSwitcherActivity">
+    tools:context=".viewswitcher.ViewSwitcherActivity">
 
     <ViewSwitcher
         android:id="@+id/viewSwitcher"

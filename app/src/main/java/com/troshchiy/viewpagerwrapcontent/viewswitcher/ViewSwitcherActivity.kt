@@ -1,4 +1,4 @@
-package com.troshchiy.viewpagerwrapcontent
+package com.troshchiy.viewpagerwrapcontent.viewswitcher
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.GestureDetector
 import android.view.GestureDetector.OnGestureListener
 import android.view.MotionEvent
 import android.widget.ViewSwitcher
+import com.troshchiy.viewpagerwrapcontent.R
 
 
 class ViewSwitcherActivity : AppCompatActivity() {

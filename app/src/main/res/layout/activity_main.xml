@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6c6c6c"
-    tools:context=".MainActivity">
+    tools:context=".viewpager.MainActivity">
 
     <!--<android.support.v4.view.ViewPager-->
-    <com.troshchiy.viewpagerwrapcontent.DetailViewPager
+    <com.troshchiy.viewpagerwrapcontent.viewpager.WrapContentViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

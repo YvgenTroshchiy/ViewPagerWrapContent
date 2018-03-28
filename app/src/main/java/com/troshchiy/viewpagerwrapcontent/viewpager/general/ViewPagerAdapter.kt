@@ -23,8 +23,11 @@ class ViewPagerAdapter : PagerAdapter() {
     override fun isViewFromObject(view: View, obj: Any): Boolean = (view == obj)
     override fun getPageWidth(position: Int) = 0.95f
 
-    // https://stackoverflow.com/questions/7263291/viewpager-pageradapter-not-updating-the-view
+    // For test purpose. https://stackoverflow.com/questions/7263291/viewpager-pageradapter-not-updating-the-view
     override fun getItemPosition(obj: Any): Int = POSITION_NONE
+    override fun destroyItem(container: ViewGroup, position: Int, obj: Any) {
+        container.removeView(obj as View)
+    }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = container.inflate(R.layout.viewpager_element)

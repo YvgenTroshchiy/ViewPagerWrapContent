@@ -38,15 +38,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun setDataToAdapter() {
         Log.w(tag, "setDataToAdapter")
-        val f1 = Ride("Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library.")
-        val f2 = Ride("To begin, create a layout that contains a ViewPager:")
-        adapter.data = listOf(f1, f2)
+        val r1 = Ride("Screen slides are transitions between one entire screen to another and are common with UIs like setup wizards or slideshows. This lesson shows you how to do screen slides with a ViewPager provided by the support library.")
+        val r2 = Ride("To begin, create a layout that contains a ViewPager:")
+        adapter.data = listOf(r1, r2)
     }
 
     private fun setDataToAdapter2() {
         Log.w(tag, "setDataToAdapter2")
-        val f1 = Ride("Tra ta ta ta")
-        val f2 = Ride("Param pam pam pam")
-        adapter.data = listOf(f1, f2)
+        val r1 = Ride("Tra ta ta ta")
+        val r2 = Ride("Param pam pam pam")
+        adapter.data = listOf(r1, r2)
     }
 }

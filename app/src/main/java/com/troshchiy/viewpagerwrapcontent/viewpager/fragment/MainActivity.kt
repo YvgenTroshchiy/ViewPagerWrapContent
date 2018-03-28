@@ -11,9 +11,8 @@ import com.troshchiy.viewpagerwrapcontent.dpToPx
 @SuppressLint("Registered")
 class MainActivity : AppCompatActivity() {
 
-    private var sectionsPagerAdapter: SectionsPagerAdapter? = null
-
     private var viewPager: ViewPager? = null
+    private var sectionsPagerAdapter: SectionsPagerAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
 
+        setupViewPager()
+    }
+
+    private fun setupViewPager() {
         viewPager = findViewById(R.id.viewPager)
-
         viewPager?.pageMargin = 12.dpToPx
-
         viewPager?.adapter = sectionsPagerAdapter
     }
 }

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.troshchiy.viewpagerwrapcontent.R
 import com.troshchiy.viewpagerwrapcontent.Ride
-import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdBinding
+import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdGeneratedBinding
 import com.troshchiy.viewpagerwrapcontent.inflater
 
 
@@ -30,10 +30,10 @@ class GeneratedVmBindingAdapter : PagerAdapter() {
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val binding: ViewpagerElementBdBinding =
-                DataBindingUtil.inflate(container.context.inflater, R.layout.viewpager_element_bd, container, false)
+        val binding: ViewpagerElementBdGeneratedBinding =
+                DataBindingUtil.inflate(container.context.inflater, R.layout.viewpager_element_bd_generated, container, false)
 
-        binding.foo = data[position]
+        binding.ride = data[position]
 
         val view = binding.root
         container.addView(view)

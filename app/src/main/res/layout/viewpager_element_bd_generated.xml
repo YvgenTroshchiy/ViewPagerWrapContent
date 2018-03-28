@@ -7,7 +7,7 @@
     <data>
 
         <variable
-            name="foo"
+            name="ride"
             type="com.troshchiy.viewpagerwrapcontent.Ride" />
     </data>
 
@@ -23,7 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="@{foo.text}"
+            android:text="@{ride.text}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/img_image"
             app:layout_constraintStart_toStartOf="parent"

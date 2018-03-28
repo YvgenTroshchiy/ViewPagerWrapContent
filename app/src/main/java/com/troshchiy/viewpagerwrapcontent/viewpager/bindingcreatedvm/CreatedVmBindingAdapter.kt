@@ -5,20 +5,19 @@ import android.support.v4.view.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
 import com.troshchiy.viewpagerwrapcontent.R
-import com.troshchiy.viewpagerwrapcontent.Ride
-import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdBinding
+import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdCreatedBinding
 import com.troshchiy.viewpagerwrapcontent.inflater
 
 
 class CreatedVmBindingAdapter : PagerAdapter() {
 
-    var data: List<Ride> = listOf()
+    var viewModels: List<RideViewModel> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
-    override fun getCount() = data.size
+    override fun getCount() = viewModels.size
     override fun isViewFromObject(view: View, obj: Any): Boolean = (view == obj)
     override fun getPageWidth(position: Int) = 0.95f
 
@@ -30,10 +29,10 @@ class CreatedVmBindingAdapter : PagerAdapter() {
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val binding: ViewpagerElementBdBinding =
-                DataBindingUtil.inflate(container.context.inflater, R.layout.viewpager_element_bd, container, false)
+        val binding: ViewpagerElementBdCreatedBinding =
+                DataBindingUtil.inflate(container.context.inflater, R.layout.viewpager_element_bd_created, container, false)
 
-        binding.foo = data[position]
+        binding.viewModel = viewModels[position]
 
         val view = binding.root
         container.addView(view)

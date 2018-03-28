@@ -1,4 +1,4 @@
-package com.troshchiy.viewpagerwrapcontent.viewpager.binding
+package com.troshchiy.viewpagerwrapcontent.viewpager.bindinggenerated
 
 import android.databinding.DataBindingUtil
 import android.support.v4.view.PagerAdapter

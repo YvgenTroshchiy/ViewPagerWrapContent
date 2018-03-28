@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         Handler().postDelayed({ setDataToAdapter() }, 2000)
         Handler().postDelayed({ setDataToAdapter2() }, 4000)
+        Handler().postDelayed({ setDataToAdapter() }, 7000)
     }
 
     private fun setupViewPager() {

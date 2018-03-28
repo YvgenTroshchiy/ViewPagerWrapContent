@@ -11,7 +11,6 @@ import com.troshchiy.viewpagerwrapcontent.R
 
 
 class ViewSwitcherActivity : AppCompatActivity() {
-
     private val tag = ViewSwitcherActivity::class.java.simpleName
 
     private lateinit var switcher: ViewSwitcher

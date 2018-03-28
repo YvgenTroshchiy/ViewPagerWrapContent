@@ -5,10 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.troshchiy.viewpagerwrapcontent.Foo
 import com.troshchiy.viewpagerwrapcontent.R
 import com.troshchiy.viewpagerwrapcontent.dpToPx
 import com.troshchiy.viewpagerwrapcontent.inflate
-import com.troshchiy.viewpagerwrapcontent.Foo
 
 
 class ViewPagerAdapter : PagerAdapter() {
@@ -22,6 +22,9 @@ class ViewPagerAdapter : PagerAdapter() {
     override fun getCount() = data.size
     override fun isViewFromObject(view: View, obj: Any): Boolean = (view == obj)
     override fun getPageWidth(position: Int) = 0.95f
+
+    // https://stackoverflow.com/questions/7263291/viewpager-pageradapter-not-updating-the-view
+    override fun getItemPosition(obj: Any): Int = POSITION_NONE
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = container.inflate(R.layout.viewpager_element)

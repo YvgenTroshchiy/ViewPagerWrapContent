@@ -11,7 +11,7 @@
 
     <!--<android.support.v4.view.ViewPager-->
     <com.troshchiy.viewpagerwrapcontent.viewpager.WrapContentViewPager
-        android:id="@+id/container"
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

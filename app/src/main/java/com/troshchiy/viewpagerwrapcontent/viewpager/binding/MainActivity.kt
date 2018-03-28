@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewPager = findViewById(R.id.container)
+        viewPager = findViewById(R.id.viewPager)
 
         viewPager?.pageMargin = 12.dpToPx
 

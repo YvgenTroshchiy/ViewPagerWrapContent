@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         sectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
 
-        viewPager = findViewById(R.id.container)
+        viewPager = findViewById(R.id.viewPager)
 
         viewPager?.pageMargin = 12.dpToPx
 

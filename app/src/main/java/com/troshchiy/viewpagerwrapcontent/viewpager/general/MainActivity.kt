@@ -20,11 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setupViewPager()
+
+        Handler().postDelayed({ setDataToAdapter() }, 2000)
+    }
+
+    private fun setupViewPager() {
         viewPager = findViewById(R.id.viewPager)
         viewPager.pageMargin = 12.dpToPx
         viewPager.adapter = adapter
-
-        Handler().postDelayed({ setDataToAdapter() }, 2000)
     }
 
     private fun setDataToAdapter() {

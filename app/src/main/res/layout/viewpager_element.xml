@@ -8,7 +8,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_white_rectangle_10_both"
     android:padding="16dp"
-    tools:background="#be8585">
+    tools:background="#ba9797">
 
     <TextView
         android:id="@+id/tv_text"

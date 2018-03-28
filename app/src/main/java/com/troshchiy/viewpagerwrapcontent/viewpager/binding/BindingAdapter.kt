@@ -1,14 +1,13 @@
 package com.troshchiy.viewpagerwrapcontent.viewpager.binding
 
+import android.databinding.DataBindingUtil
 import android.support.v4.view.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import com.troshchiy.viewpagerwrapcontent.Foo
 import com.troshchiy.viewpagerwrapcontent.R
-import com.troshchiy.viewpagerwrapcontent.dpToPx
-import com.troshchiy.viewpagerwrapcontent.inflate
+import com.troshchiy.viewpagerwrapcontent.databinding.ViewpagerElementBdBinding
+import com.troshchiy.viewpagerwrapcontent.inflater
 
 
 class BindingViewPagerAdapter : PagerAdapter() {
@@ -24,13 +23,12 @@ class BindingViewPagerAdapter : PagerAdapter() {
     override fun getPageWidth(position: Int) = 0.95f
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val view = container.inflate(R.layout.viewpager_element)
-        val textView = view.findViewById<TextView>(R.id.tv_text)
-        val imageView = view.findViewById<ImageView>(R.id.img_image)
+        val binding: ViewpagerElementBdBinding =
+                DataBindingUtil.inflate(container.context.inflater, R.layout.viewpager_element_bd, container, false)
 
-        textView.text = data[position].text
-        if (position == 1) imageView.layoutParams.height = 40.dpToPx
+        binding.foo = data[position]
 
+        val view = binding.root
         container.addView(view)
         return view
     }

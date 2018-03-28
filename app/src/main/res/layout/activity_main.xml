@@ -2,12 +2,10 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6c6c6c"
-    tools:context=".viewpager.general.MainActivity">
+    android:background="#949494">
 
     <!--<android.support.v4.view.ViewPager-->
     <com.troshchiy.viewpagerwrapcontent.viewpager.WrapContentViewPager
@@ -15,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#fdc5c5"
+        android:background="#bababa"
         android:clipToPadding="false"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a9a9a9"
-    tools:context=".viewswitcher.ViewSwitcherActivity">
+    android:background="#a9a9a9">
 
     <ViewSwitcher
         android:id="@+id/viewSwitcher"
@@ -52,7 +51,7 @@
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_gray_rectangle_10_both"
+            android:background="@drawable/rounded_teal_rectangle_10_both"
             android:padding="16dp"
             tools:background="#be8585">
 
